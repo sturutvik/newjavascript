@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Body Color</title>
+    <style>
+        .b input {
+            text-align: center;
+
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            gap: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Input Text to Change Background Color</h1>
+    <input type="text" id="colorInput" class="b" placeholder="Type a color">
+    <script>
+
+        document.querySelector('#colorInput').addEventListener('input', function () {
+            const color = this.value.toLowerCase();
+            document.body.style.backgroundColor = color;
+        })
+    </script>
+</body>
+
+</html>
